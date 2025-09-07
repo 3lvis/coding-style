@@ -20,12 +20,6 @@ These aren’t hard rules, just guidelines that help me stay consistent and redu
 - **Consistency:** I’d rather follow my own convention consistently than reinvent it every file.  
 - **Simplicity:** Readability and explicitness over cleverness or “magic.”
 
-## Notes
-
-- This repo is for me, not a team handbook.  
-- The style guides will evolve over time as I revisit and refine my preferences.  
-- Sometimes I’ll keep things intentionally open-ended instead of over-specifying.  
-
 ## License
 
 Unlicensed / personal use only.
