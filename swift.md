@@ -14,14 +14,21 @@ ERRORS & OPTIONALES
 - No force unwraps/tries in production code; handle or propagate errors.
 
 STYLE & LAYOUT
-- MARK sections for structure (e.g., `// MARK: - Rendering`).
 - One blank line between logical blocks; trim trailing whitespace; normalize to LF line endings.
-- Line length ~100–120 chars; wrap thoughtfully.
-- Prefer immutable (`let`) over mutable (`var`) where possible.
+- No line length.
+
+### Extensions & Conformance
+- Protocol conformance should be declared in extensions, not inline with the main type declaration.
+- Group extensions with `// MARK: - <ProtocolName>` for clarity and discoverability.
+- Keep protocol-required members inside the corresponding extension when possible.
+
+PROPERTIES & INITIALIZATION
+- Use lazy closure properties (`lazy var`) for expensive or multi-step initialization, keeping setup close to the property itself.
+- Initializers should remain self-contained and side-effect free beyond constructing values.
 
 DOCUMENTATION & COMMENTS
 - Public APIs: brief `///` doc comment (single paragraph).
-- Inline comments only when intent isn’t obvious; avoid redundant narration.
+- Comments only when intent isn’t obvious; avoid redundant narration.
 
 TESTS (XCTest)
 - One focused behavior per test with a short `///` one-liner explaining what it verifies.
@@ -33,10 +40,6 @@ TESTS (XCTest)
 DEPENDENCIES & INJECTION
 - Depend on protocols; inject collaborators via initializers/params.
 - Keep units mockable without heavy frameworks.
-
-CODE TRANSFORMATIONS (when applicable)
-- Make transformation helpers pure and deterministic.
-- Separate “policy selection” from “transformation” logic.
 
 MISC
 - Prefer explicitness over magic; avoid hidden globals/singletons.
