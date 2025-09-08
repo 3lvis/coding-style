@@ -1,3 +1,5 @@
+# Swift Style Guide
+
 **PRINCIPLES**
 
 * Favor pure, stateless, unit-testable functions; push side effects to the edges.
